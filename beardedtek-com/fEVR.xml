@@ -32,9 +32,7 @@
   <Config Name="RESET_DATA_DIRS"
     Description="Container Variable: SETUP_DATA_DIRS - Reset Data Directories.  Set to true.  Backups will be saved in data/BAK" 
     Target="RESET_DATA_DIRS" Default="false" Mode="" Type="Variable"
-    Display="always" Required="false" Mask="false">
-  false
-  </Config>
+    Display="always" Required="false" Mask="false">false</Config>
 
   <Config Name="MQTT_USER"
     Description="Container Path: MQTT_USER"
@@ -45,9 +43,7 @@
   <Config Name="MQTT_BROKER_PORT"
     Description="Container Variable: MQTT_BROKER_PORT"
     Target="MQTT_BROKER_PORT" Default="1883" Mode="" Type="Variable"
-    Display="always" Required="true" Mask="false">
-  1883
-  </Config>
+    Display="always" Required="true" Mask="false">1883</Config>
 
   <Config Name="MQTT_BROKER_URL"
     Description="Container Variable: MQTT_BROKER_URL"
@@ -58,63 +54,45 @@
   <Config Name="FRIGATE_URL"
     Description="Container Variable: FRIGATE_URL"
     Target="FRIGATE_URL" Default="http://frigate:5000" Mode="" Type="Variable"
-    Display="always" Required="true" Mask="false">
-  http://frigate:5000
-  </Config>
+    Display="always" Required="true" Mask="false">http://frigate:5000</Config>
 
   <Config Name="Data"
     Description="Contains the SQLite database and config.json files"
     Target="/var/www/data" Default="/mnt/user/appdata/fevr/data" Mode="rw" Type="Path"
-    Display="always" Required="false" Mask="false">
-  /mnt/user/appdata/fevr/data
-  </Config>
+    Display="always" Required="false" Mask="false">/mnt/user/appdata/fevr/data</Config>
 
   <Config Name="Events" Description=" Save events to a local folder"
     Target="/var/www/html/events" Default="/mnt/user/appdata/fevr/events" Mode="rw"
-    Type="Path" Display="always" Required="false" Mask="false">
-  /mnt/user/appdata/fevr/events
-  </Config>
+    Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/fevr/events</Config>
 
   <Config Name="MQTT_TOPICS"
     Description="Container Variable: MQTT_TOPICS" 
     Target="MQTT_TOPICS" Default="frigate/+" Mode="" Type="Variable"
-    Display="advanced" Required="false" Mask="false">
-  frigate/+
-  </Config>
+    Display="advanced" Required="false" Mask="false">frigate/+</Config>
 
   <Config Name="FEVR_IP"
     Description="Container Variable: FEVR_IP"
     Target="FEVR_IP" Default="0.0.0.0" Mode="" Type="Variable"
-    Display="advanced" Required="true" Mask="false">
-  0.0.0.0
-  </Config>
+    Display="advanced" Required="true" Mask="false">0.0.0.0</Config>
 
   <Config Name="FEVR_PORT"
     Description="Container Variable: FEVR_PORT"
     Target="FEVR_PORT" Default="5080" Mode="" Type="Variable"
-    Display="advanced" Required="true" Mask="false">
-  5080
-  </Config>
+    Display="advanced" Required="true" Mask="false">5080</Config>
 
   <Config Name="FEVR_DEBUG"
     Description="Container Variable: FEVR_DEBUG"
     Target="FEVR_DEBUG" Default="false" Mode="" Type="Variable"
-    Display="advanced" Required="false" Mask="false">
-  false
-  </Config>
+    Display="advanced" Required="false" Mask="false">false</Config>
 
   <Config Name="PUID"
     Description="Container Variable: PUID"
     Target="PUID" Default="100" Mode="" Type="Variable"
-    Display="advanced-hide" Required="false" Mask="false">
-  100
-  </Config>
+    Display="advanced-hide" Required="false" Mask="false">100</Config>
 
   <Config Name="PGID"
     Description="Container Variable: PGID"
     Target="PGID" Default="101" Mode="" Type="Variable"
-    Display="advanced-hide" Required="false" Mask="false">
-  100
-  </Config>
+    Display="advanced-hide" Required="false" Mask="false">101</Config>
 
 </Container>
