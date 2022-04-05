@@ -5,7 +5,7 @@
   <Name>fEVR</Name>
   <Repository>ghcr.io/beardedtek-com/fevr:main</Repository>
   <Registry>https://github.com/BeardedTek-com/fEVR/pkgs/container/fevr</Registry>
-  <Repository>beardedtek-com/fEVR</Repository>
+  <Repository>beardedtek-com/fEVR</Repository
   <Project>https://fevr.video</Project>
   <Support>https://github.com/beardedtek-com/fEVR/discussions</Support>
   <Overview>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Overview>
@@ -14,6 +14,7 @@
   <Privileged>true</Privileged>
   <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:5080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/BeardedTek-com/unraid-templates/main/beardedtek-com/fEVR.xml</TemplateURL>
   <Icon>https://fevr.video/img/logo.svg</Icon>
   <Description>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Description>
   <Config Name="WebUI" Target="5080" Default="" Mode="tcp" Description="Container Port: 5080" Type="Port" Display="always" Required="false" Mask="false"/>
