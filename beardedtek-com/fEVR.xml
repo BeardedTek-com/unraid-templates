@@ -11,7 +11,7 @@
   <Overview>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Overview>
   <Category>HomeAutomation: Security:</Category>
   <Shell>bash</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:5080]/</WebUI>
   <Icon>https://fevr.video/img/logo.svg</Icon>
