@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2022-04-05</Date>
+  <Beta>True</Beta>
+  <Name>fEVR</Name>
+  <Repository>ghcr.io/beardedtek-com/fevr:main</Repository>
+  <Registry>https://github.com/BeardedTek-com/fEVR/pkgs/container/fevr</Registry>
+  <Repository>beardedtek-com/fEVR</Repository
+  <Project>https://fevr.video</Project>
+  <Support>https://github.com/beardedtek-com/fEVR/discussions</Support>
+  <Overview>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Overview>
+  <Category>HomeAutomation: Security:</Category>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:5080]/</WebUI>
+  <Icon>https://fevr.video/img/logo.svg</Icon>
+  <Description>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Description>
+  <Config Name="WebUI" Target="5080" Default="" Mode="tcp" Description="Container Port: 5080" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT_PASS" Target="MQTT_PASS" Default="" Mode="" Description="Container Variable: MQTT_PASS" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="MQTT_USER" Target="MQTT_USER" Default="" Mode="" Description="Container Path: MQTT_USER" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MQTT_BROKER_PORT" Target="MQTT_BROKER_PORT" Default="1883" Mode="" Description="Container Variable: MQTT_BROKER_PORT" Type="Variable" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="MQTT_BROKER_URL" Target="MQTT_BROKER_URL" Default="" Mode="" Description="Container Variable: MQTT_BROKER_URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FRIGATE_URL" Target="FRIGATE_URL" Default="http://frigate:5000" Mode="" Description="Container Variable: FRIGATE_URL" Type="Variable" Display="always" Required="true" Mask="false">http://frigate:5000</Config>
+  <Config Name="Data" Target="/var/www/data" Default="/mnt/user/appdata/fevr/data" Mode="rw" Description="Contains the SQLite database and config.json files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/fevr/data</Config>
+  <Config Name="Events" Target="/var/www/html/events" Default="/mnt/user/appdata/fevr/events" Mode="rw" Description=" Save events to a local folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/fevr/events</Config>
+  <Config Name="MQTT_TOPICS" Target="MQTT_TOPICS" Default="frigate/+" Mode="" Description="Container Variable: MQTT_TOPICS" Type="Variable" Display="advanced" Required="false" Mask="false">frigate/+</Config>
+  <Config Name="FEVR_IP" Target="FEVR_IP" Default="0.0.0.0" Mode="" Description="Container Variable: FEVR_IP" Type="Variable" Display="advanced" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="FEVR_PORT" Target="FEVR_PORT" Default="5080" Mode="" Description="Container Variable: FEVR_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">5080</Config>
+  <Config Name="FEVR_DEBUG" Target="FEVR_DEBUG" Default="false" Mode="" Description="Container Variable: FEVR_DEBUG" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="PUID" Target="PUID" Default="100" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="101" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+</Container>
