@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2022-04-18</Date>
+  <Beta>True</Beta>
+  <Name>fEVR</Name>
+  <Repository>ghcr.io/beardedtek-com/fevr-flask:main</Repository>
+  <Registry>https://github.com/BeardedTek-com/fEVR/pkgs/container/fevr</Registry>
+  <Repository>beardedtek-com/fEVR-flask</Repository>
+  <Project>https://fevr.video</Project>
+  <Support>https://github.com/beardedtek-com/fEVR/discussions</Support>
+  <Overview>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Overview>
+  <Category>HomeAutomation: Security:</Category>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:5090]/</WebUI>
+  <Icon>https://fevr.video/img/logo.svg</Icon>
+  <Description>fEVR works along side of frigate and home assistant to collect video and snapshots of objects detected using your existing camera systems.</Description>
+
+  <Config Name="MQTT_CLIENT"
+    Description="Runs fEVR mqtt client on the same docker container"
+    Target="MQTT_CLIENT" Default="" Mode="" Type="Variable"
+    Display="always" Required="true" Mask="false">true
+  </Config>
+
+  <Config Name="WebUI" 
+    Description="Container Port: 5090"
+    Target="5090" Default="" Mode="tcp" Type="Port"
+    Display="always" Required="false" Mask="false"
+  />
+
+  <Config Name="PUID"
+    Description="Container Variable: PUID"
+    Target="PUID" Default="1000" Mode="" Type="Variable"
+    Display="advanced-hide" Required="false" Mask="false">1000
+  </Config>
+
+  <Config Name="PGID"
+    Description="Container Variable: PGID"
+    Target="PGID" Default="1000" Mode="" Type="Variable"
+    Display="advanced-hide" Required="false" Mask="false">1000
+  </Config>
+
+  <Config Name="Events"
+    Target="/fevr/app/static/events"
+    Default="/mnt/user/appdata/fevr/events" Mode="rw"
+    Description=" Save events to a local folder" 
+    Type="Path" Display="always" Required="false"
+    Mask="false">/mnt/user/appdata/fevr/events
+  </Config>
+
+  <Config Name="FEVR_PORT"
+    Description="Container Variable: FEVR_PORT"
+    Target="FEVR_PORT" Default="5080" Mode="" Type="Variable"
+    Display="advanced" Required="true" Mask="false">5090
+  </Config>
+
+  <Config Name="FLASK_ENV"
+    Description="Set to 'development' for debug mode"
+    Target="FLASK_ENV" Default="" Mode="" Type="Variable"
+    Display="advanced" Required="false" Mask="false">
+  </Config>
+
+</Container>
